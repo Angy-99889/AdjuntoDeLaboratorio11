@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Primo (do...while)</title>
+</head>
+<body>
+  <h1>Ejercicio 8: Verificar si es primo (do...while)</h1>
+  <button onclick="verificarPrimo()">Verificar</button>
+
+  <script>
+    function verificarPrimo() {
+      let n = parseInt(prompt("Ingrese un número entero positivo:"));
+      if (isNaN(n) || n < 2) {
+        alert("Número no válido.");
+        return;
+      }
+      let i = 2;
+      let esPrimo = true;
+      do {
+        if (n % i === 0) {
+          esPrimo = false;
+          break;
+        }
+        i++;
+      } while (i <= Math.sqrt(n));
+
+      alert(esPrimo ? n + " es primo" : n + " no es primo");
+    }
+  </script>
+</body>
+</html>

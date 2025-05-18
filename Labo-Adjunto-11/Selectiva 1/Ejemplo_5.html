@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio Selectivo 5 - Menor de 3 Números</title>
+</head>
+<body>
+  <h1>Ejercicio 5: Menor de tres números</h1>
+  <button onclick="menorDeTres()">Calcular</button>
+
+  <script>
+    function menorDeTres() {
+      let a = parseFloat(prompt("Ingrese el primer número:"));
+      let b = parseFloat(prompt("Ingrese el segundo número:"));
+      let c = parseFloat(prompt("Ingrese el tercer número:"));
+
+      if (isNaN(a) ||  isNaN(b) || isNaN(c)) {
+        alert("Debe ingresar tres números válidos.");
+        return;
+      }
+
+      let menor = Math.min(a, b, c);
+      alert("El número menor es: " + menor);
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 16 - Categoría por Edad</title>
+</head>
+<body>
+  <h1>Ejercicio 16: Clasificación según la edad</h1>
+  <button onclick="clasificarEdad()">Clasificar</button>
+
+  <script>
+    function clasificarEdad() {
+      let edad = parseInt(prompt("Ingrese su edad:"));
+
+      if (isNaN(edad) || edad < 0) {
+        alert("Edad inválida.");
+        return;}
+      let categoria = "";
+      if (edad < 12) {
+        categoria = "Niño";
+      } else if (edad < 18) {
+        categoria = "Joven";
+      } else if (edad < 60) {
+        categoria = "Adulto";
+      } else {
+        categoria = "Adulto mayor";}
+      alert("Categoría: " + categoria);
+    }
+  </script>
+</body>
+</html>

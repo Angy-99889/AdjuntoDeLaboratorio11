@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1 - Conversión de Metros</title>
+</head>
+<body>
+  <h2>Ejercicio 1: Conversión de Metros</h2>
+  <p>Convierte metros a centímetros, pulgadas, pies y yardas.</p>
+  <button onclick="convertirMetros()">Convertir</button>
+
+  <script>
+    function convertirMetros() {
+     
+      let metros = parseFloat(prompt("Ingrese la cantidad en metros:"));
+
+      let centimetros = metros * 100;
+      let pulgadas = centimetros / 2.54;
+      let pies = pulgadas / 12;
+      let yardas = pies / 3;
+
+      alert(
+        "Centímetros: " + centimetros.toFixed(2) + "\n" +
+        "Pulgadas: " + pulgadas.toFixed(2) + "\n" +
+        "Pies: " + pies.toFixed(2) + "\n" +
+        "Yardas: " + yardas.toFixed(2));
+    }
+  </script>
+</body>
+</html>

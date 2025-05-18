@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 9 - Raíz Cuadrada</title>
+</head>
+<body>
+  <h1>Ejercicio 9: Raíz cuadrada de un número positivo</h1>
+  <button onclick="raizCuadrada()">Calcular</button>
+
+  <script>
+    function raizCuadrada() {
+      let n = parseFloat(prompt("Ingrese un número positivo:"));
+
+      if (isNaN(n) || n < 0) {
+        alert("Debe ingresar un número positivo.");
+        return;
+      }
+
+      alert("La raíz cuadrada es: " + Math.sqrt(n).toFixed(2));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 10 - Área Triángulo</title>
+</head>
+<body>
+  <h1>Ejercicio 10: Área de un triángulo</h1>
+  <button onclick="areaTriangulo()">Calcular</button>
+
+  <script>
+    function areaTriangulo() {
+      let b = parseFloat(prompt("Ingrese la base:"));
+      let h = parseFloat(prompt("Ingrese la altura:"));
+
+      if (isNaN(b) || isNaN(h) ||  b <= 0 || h <= 0) {
+        alert("Base y altura deben ser mayores que cero.");
+        return;
+      }
+
+      let area = (b * h) / 2;
+      alert("Área del triángulo: " + area.toFixed(2));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 12 - Intercambio y cálculo</title>
+</head>
+<body>
+  <h1>Ejercicio 12: Intercambiar y calcular</h1>
+  <button onclick="calcularXYZW()">Calcular</button>
+
+  <script>
+    function calcularXYZW() {
+      let a = parseFloat(prompt("Ingrese valor a:"));
+      let b = parseFloat(prompt("Ingrese valor b:"));
+
+      if (isNaN(a) || isNaN(b)) {
+        alert("Ingrese valores válidos.");
+        return;
+      }
+
+      let x = a * 10 + b;
+      let y = b * 10 + a;
+      let z = x / 10;
+      let w = y / 10;
+
+      alert("x: " + x + "\ny: " +y+ "\nz: " +z+ "\nw: "+w);
+    }
+  </script>
+</body>
+</html>
+

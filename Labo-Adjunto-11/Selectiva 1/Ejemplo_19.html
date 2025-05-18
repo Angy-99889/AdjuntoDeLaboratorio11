@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 19 - Tipo de Triángulo</title>
+</head>
+<body>
+  <h1>Ejercicio 19: Tipo de triángulo según sus lados</h1>
+  <button onclick="tipoTriangulo()">Determinar</button>
+  <script>
+    function tipoTriangulo() {
+      let a = parseFloat(prompt("Ingrese lado a:"));
+      let b = parseFloat(prompt("Ingrese lado b:"));
+      let c = parseFloat(prompt("Ingrese lado c:"));
+
+      if ([a, b, c].some(isNaN) || a <= 0 || b <= 0 || c <= 0) {
+        alert("Lados inválidos.");
+        return;}
+      if (a + b <= c || a + c <= b ||  b + c <= a) {
+        alert("No forma un triángulo válido.");
+        return;}
+      if (a === b && b === c) {
+        alert("Triángulo equilátero");
+      } else if (a === b || b === c || a === c) {
+        alert("Triángulo isósceles");
+      } else {
+        alert("Triángulo escaleno");}
+    }
+  </script>
+</body>
+</html>

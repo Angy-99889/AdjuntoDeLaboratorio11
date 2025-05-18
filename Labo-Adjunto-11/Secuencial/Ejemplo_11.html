@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 11 - Calcular r</title>
+</head>
+<body>
+  <h1>Ejercicio 11: Calcular r = x + y + c + 10</h1>
+  <button onclick="calcularR()">Calcular</button>
+
+  <script>
+    function calcularR() {
+      let x = parseFloat(prompt("Ingrese valor x:"));
+      let c = parseFloat(prompt("Ingrese valor c:"));
+      let y = parseFloat(prompt("Ingrese valor y:"));
+
+      if (isNaN(x) ||  isNaN(c) || isNaN(y)) {
+        alert("Ingrese valores válidos.");
+        return;
+      }
+
+      let r = x + y + c + 10;
+
+      alert("Resultado r: " + r);
+    }
+  </script>
+</body>
+</html>
+

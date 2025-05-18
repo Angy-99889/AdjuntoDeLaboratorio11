@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 10 - Suma especial</title>
+</head>
+<body>
+  <h1>Ejercicio 10: Calcular x = 5 + c + d</h1>
+  <button onclick="calcularX()">Calcular</button>
+
+  <script>
+    function calcularX() {
+      let c = parseFloat(prompt("Ingrese valor c:"));
+      let d = parseFloat(prompt("Ingrese valor d:"));
+
+      if (isNaN(c) || isNaN(d)) {
+        alert("Ingrese valores válidos.");
+        return;
+      }
+
+      let x = 5 + c + d;
+
+      alert("Resultado x: " +x);
+    }
+  </script>
+</body>
+</html>
+
+

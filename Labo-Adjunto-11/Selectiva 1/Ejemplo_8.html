@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 8 - Positivo o Negativo</title>
+</head>
+<body>
+  <h1>Ejercicio 8: Determinar si un número es positivo o negativo</h1>
+  <button onclick="positivoONegativo()">Verificar</button>
+
+  <script>
+    function positivoONegativo() {
+      let n = parseFloat(prompt("Ingrese un número:"));
+
+      if (isNaN(n)) {
+        alert("Debe ingresar un número válido.");
+        return;
+      }
+
+      if (n > 0) alert("El número es positivo");
+      else if (n < 0) alert("El número es negativo");
+      else alert("El número es cero");
+    }
+  </script>
+</body>
+</html>

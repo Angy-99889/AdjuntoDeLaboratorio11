@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 16 - Reordenar números</title>
+</head>
+<body>
+  <h1>Ejercicio 16: Reordenar números</h1>
+  <button onclick="reordenar()">Reordenar</button>
+
+  <script>
+    function reordenar() {
+      let n = prompt("Ingrese un número:");
+
+      if (!n || isNaN(Number(n))) {
+        alert("Ingrese un número válido.");
+        return;
+      }
+
+      n = n.trim();
+      let a = parseInt(n.charAt(n.length - 1)); 
+      let b = parseInt(n.charAt(n.length - 2) || 0);
+      let c = parseInt(n.charAt(n.length - 3) || 0);
+
+      let nn = a * 10000 + Number(n) * 10 + b;
+
+      alert("Número original: " +n+ "\nNúmero reordenado: " +nn);
+    }
+  </script>
+</body>
+</html>

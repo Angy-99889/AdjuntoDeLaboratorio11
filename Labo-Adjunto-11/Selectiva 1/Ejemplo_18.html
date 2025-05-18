@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 18 - Calificación</title>
+</head>
+<body>
+  <h1>Ejercicio 18: Determinar calificación por nota</h1>
+  <button onclick="evaluarNota()">Evaluar</button>
+
+  <script>
+    function evaluarNota() {
+      let nota = parseFloat(prompt("Ingrese la nota (0 a 10):"));
+
+      if (isNaN(nota) || nota < 0 || nota > 10) {
+        alert("Nota no válida.");
+        return;}
+      let mensaje = "";
+      if (nota === 10) {
+        mensaje = "Excelente";
+      } else if (nota === 9) {
+        mensaje = "Muy bien";
+      } else if (nota >= 7) {
+        mensaje = "Bien";
+      } else if (nota >= 5) {
+        mensaje = "Regular";
+      } else {
+        mensaje = "Reprobado";}
+      alert("Calificación: " + mensaje);}
+  </script>
+</body>
+</html>

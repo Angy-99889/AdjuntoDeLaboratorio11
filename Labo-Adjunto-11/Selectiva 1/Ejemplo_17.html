@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 17 - Sexo por Letra</title>
+</head>
+<body>
+  <h1>Ejercicio 17: Determinar sexo según letra (M o F)</h1>
+  <button onclick="determinarSexo()">Determinar</button>
+
+  <script>
+    function determinarSexo() {
+      let letra = prompt("Ingrese M para masculino o F para femenino:");
+
+      if (!letra) {
+        alert("Entrada inválida.");
+        return;
+      }
+
+      letra = letra.trim().toUpperCase();
+
+      if (letra === "M") {
+        alert("Masculino");
+      } else if (letra === "F") {
+        alert("Femenino");
+      } else {
+        alert("Letra no válida. Use M o F.");
+      }
+    }
+  </script>
+</body>
+</html>
+

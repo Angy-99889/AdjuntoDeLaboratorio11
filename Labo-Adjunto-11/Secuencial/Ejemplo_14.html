@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 14 - Multiplicaciones</title>
+</head>
+<body>
+  <h1>Ejercicio 14: Multiplicaciones con n</h1>
+  <button onclick="multiplicar()">Calcular</button>
+
+  <script>
+    function multiplicar() {
+      let n = parseFloat(prompt("Ingrese valor n:"));
+      if (isNaN(n)) {
+        alert("Ingrese un número válido.");
+        return;
+      }
+
+      let d = n * 10;
+      let h = n * 100;
+      let k = n * 1000;
+      let m = n * 1000000;
+
+      alert("d =" +d+ "\nh = " +h+  "\nk = " +k + "\nm = "+m);
+    }
+  </script>
+</body>
+</html>

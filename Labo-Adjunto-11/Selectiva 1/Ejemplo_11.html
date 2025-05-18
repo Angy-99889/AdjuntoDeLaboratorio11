@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 11 - Mayor de 4 Números</title>
+</head>
+<body>
+  <h1>Ejercicio 11: Mayor de 4 números</h1>
+  <button onclick="mayorDeCuatro()">Calcular</button>
+  <script>
+    function mayorDeCuatro() {
+      let a = parseFloat(prompt("Ingrese número 1:"));
+      let b = parseFloat(prompt("Ingrese número 2:"));
+      let c = parseFloat(prompt("Ingrese número 3:"));
+      let d = parseFloat(prompt("Ingrese número 4:"));
+
+      if ([a, b, c, d].some(isNaN)) {
+        alert("Debe ingresar cuatro números válidos.");
+        return;
+      }
+
+      let mayor = Math.max(a, b, c, d);
+      alert("El número mayor es: " + mayor);
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Suma de Impares</title>
+</head>
+<body>
+  <h2>Suma de Impares del 1 al 20</h2>
+  <button onclick="sumarImpares()">Calcular</button>
+
+  <script>
+    function sumarImpares() {
+      let suma = 0;
+      for (let i = 1; i < 20; i += 2) suma += i;
+      alert("Suma de impares:" +suma);
+    }
+  </script>
+</body>
+</html>

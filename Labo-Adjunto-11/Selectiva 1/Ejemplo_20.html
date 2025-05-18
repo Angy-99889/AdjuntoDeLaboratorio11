@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 20 - Semestre por Sigla</title>
+</head>
+<body>
+  <h1>Ejercicio 20: Determinar semestre por sigla</h1>
+  <button onclick="determinarSemestre()">Determinar</button>
+
+  <script>
+    function determinarSemestre() {
+      let sigla = prompt("Ingrese la sigla (ej: INF-131):");
+      if (!sigla || !sigla.includes("-")) {
+        alert("Sigla no válida.");
+        return;
+      }
+      let partes = sigla.split("-");
+      let codigo = partes[1];
+      if (codigo.length < 3) {
+        alert("Formato incorrecto.");
+        return;}
+      let semestre = parseInt(codigo[0]);
+      if (isNaN(semestre)) {
+        alert("No se pudo identificar el semestre.");
+      } else {
+        alert("Asignatura corresponde al semestre: " + semestre);}
+    }
+  </script>
+</body>
+</html>

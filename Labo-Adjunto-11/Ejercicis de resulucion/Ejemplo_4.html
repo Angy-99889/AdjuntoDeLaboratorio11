@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Costo de Vidrio</title>
+</head>
+<body>
+  <h2>Costo de Vidrio</h2>
+  <button onclick="calcularCosto()">Calcular</button>
+
+  <script>
+    function calcularCosto() {
+      let base = parseFloat(prompt("Ingrese la base en metros:"));
+      let altura = parseFloat(prompt("Ingrese la altura en metros:"));
+      let grosor = parseInt(prompt("Grosor del vidrio (4, 8, 10 mm):"));
+      let colocado = prompt("¿Desea el servicio de colocado? (si/no):");
+
+      let area = base * altura;
+      let precio = 0, adicional = 0;
+
+      if (grosor === 4) { precio = 60; adicional = 20; }
+      else if (grosor === 8) { precio = 90; adicional = 30; }
+      else if (grosor === 10) { precio = 110; adicional = 40; }
+
+      let costo = area * precio;
+      if (colocado.toLowerCase() === "si") costo += adicional;
+
+      alert("Costo total:" +costo.toFixed(2)+ " Bs.");
+    }
+  </script>
+</body>
+</html>

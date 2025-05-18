@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio Selectivo 3 - Valor Absoluto</title>
+</head>
+<body>
+  <h1>Ejercicio 3: Valor absoluto de un número</h1>
+  <button onclick="valorAbsoluto()">Calcular</button>
+
+  <script>
+    function valorAbsoluto() {
+      let n = parseFloat(prompt("Ingrese un número:"));
+      if (isNaN(n)) {
+        alert("Debe ingresar un número válido.");
+        return;
+      }
+
+      alert("El valor absoluto es: " + Math.abs(n));
+    }
+  </script>
+</body>
+</html>

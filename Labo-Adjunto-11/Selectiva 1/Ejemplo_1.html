@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio Selectivo 1 - Primer Dígito</title>
+</head>
+<body>
+  <h1>Ejercicio 1: Primer dígito de un número</h1>
+  <button onclick="primerDigito()">Calcular</button>
+
+  <script>
+    function primerDigito() {
+      let n = prompt("Ingrese un número mayor a 9:");
+      if (isNaN(n) || n.length < 2) {
+        alert("Debe ingresar un número válido mayor a 9.");
+        return;
+      }
+
+      let primer = n.trim()[0];
+      alert("El primer dígito es: " + primer);
+    }
+  </script>
+</body>
+</html>
+

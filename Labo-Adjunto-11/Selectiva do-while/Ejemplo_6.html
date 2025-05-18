@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Producto de pares (do...while)</title>
+</head>
+<body>
+  <h1>Ejercicio 6: Producto de pares (do...while)</h1>
+  <button onclick="productoPares()">Calcular Producto</button>
+  <script>
+    function productoPares() {
+      let n = parseInt(prompt("Ingrese el valor de n:"));
+      if (isNaN(n) || n < 2) {
+        alert("Ingrese un número mayor o igual a 2.");
+        return;
+      }
+
+      let i = 2;
+      let producto = 1;
+      do {
+        producto *= i;
+        i += 2;
+      } while (i <= n);
+
+      alert("Producto de pares: " + producto);
+    }
+  </script>
+</body>
+</html>

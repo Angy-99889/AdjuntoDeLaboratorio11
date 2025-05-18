@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Suma de Pares</title>
+</head>
+<body>
+  <h2>Suma de Pares del 1 al 20</h2>
+  <button onclick="sumarPares()">Calcular</button>
+
+  <script>
+    function sumarPares() {
+      let suma = 0;
+      for (let i = 2; i <= 20; i += 2) suma += i;
+      alert("Suma de pares:" +suma);
+    }
+  </script>
+</body>
+</html>

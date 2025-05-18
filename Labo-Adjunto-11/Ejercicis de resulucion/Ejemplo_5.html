@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Evaluación por Nota</title>
+</head>
+<body>
+  <h2>Evaluación por Nota</h2>
+  <button onclick="evaluar()">Evaluar</button>
+
+  <script>
+    function evaluar() {
+      let n = parseInt(prompt("Ingrese la nota:"));
+      if (n > 100 || n < 0) alert("Nota no válida");
+      else if (n === 100) alert("Excelente");
+      else if (n === 90) alert("Sobresaliente");
+      else if (n >= 70) alert("Notable");
+      else if (n >= 50) alert("Aprobó");
+      else alert("Cuidado");
+    }
+  </script>
+</body>
+</html>

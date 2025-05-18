@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Producto entre 1 y n (while)</title>
+</head>
+<body>
+  <h1>Ejercicio 4: Producto entre 1 y n (while)</h1>
+  <button onclick="productoNumeros()">Calcular Producto</button>
+
+  <script>
+    function productoNumeros() {
+      let n = parseInt(prompt("Ingrese el valor de n:"));
+      if (isNaN(n) || n < 1) {
+        alert("Valor no válido.");
+        return;
+      }
+
+      let i = 1;
+      let producto = 1;
+      while (i <= n) {
+        producto *= i;
+        i++;
+      }
+
+      alert("Producto total: " + producto);
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 4 - Área de un Círculo</title>
+</head>
+<body>
+  <h1>Ejercicio 4: Área de un Círculo</h1>
+  <button onclick="calcularArea()">Calcular Área</button>
+
+  <script>
+    function calcularArea() {
+      let R = parseFloat(prompt("Ingrese el radio del círculo:"));
+
+      if (isNaN(R) || R <= 0) {
+        alert("Debe ingresar un número válido y mayor que cero.");
+        return;
+      }
+
+      const pi = 3.1416;
+      let s = pi * R * R;
+
+      alert("Área del círculo: " + s.toFixed(2));
+    }
+  </script>
+</body>
+</html>

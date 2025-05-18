@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Suma de cada 3 (while)</title>
+</head>
+<body>
+  <h1>Ejercicio 7: Suma de cada 3 números entre 1 y n (while)</h1>
+  <button onclick="sumarCadaTres()">Calcular Suma</button>
+
+  <script>
+    function sumarCadaTres() {
+      let n = parseInt(prompt("Ingrese el valor de n:"));
+      if (isNaN(n) || n < 3) {
+        alert("Ingrese un número válido mayor o igual a 3.");
+        return;
+      }
+
+      let i = 1;
+      let suma = 0;
+      while (i <= n) {
+        suma += i;
+        i += 3;
+      }
+
+      alert("Suma de cada 3 números: " + suma);
+    }
+  </script>
+</body>
+</html>
+

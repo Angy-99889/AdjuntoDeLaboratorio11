@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 13 - Conversión GB</title>
+</head>
+<body>
+  <h1>Ejercicio 13: Convertir GB a MB y TB</h1>
+  <button onclick="convertirGB()">Convertir</button>
+
+  <script>
+    function convertirGB() {
+      let g = parseFloat(prompt("Ingrese cantidad en GB:"));
+      if (isNaN(g)) {
+        alert("Ingrese un número válido.");
+        return;
+      }
+
+      let mb = g * 1024;
+      let tb = g / 1024;
+
+      alert("MB: " +mb.toFixed(2)+ "\nTB: " +tb.toFixed(6));
+    }
+  </script>
+</body>
+</html>
+

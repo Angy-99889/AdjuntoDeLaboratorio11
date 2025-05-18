@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Factorial (do...while)</title>
+</head>
+<body>
+  <h1>Ejercicio 5: Factorial (do...while)</h1>
+  <button onclick="calcularFactorial()">Calcular Factorial</button>
+
+  <script>
+    function calcularFactorial() {
+      let n = parseInt(prompt("Ingrese un número entero:"));
+      if (isNaN(n) || n < 0) {
+        alert("Número no válido.");
+        return;
+      }
+      let i = 1;
+      let f = 1;
+      if (n === 0) {
+        alert("0! = 1");
+        return;
+      }
+      do {
+        f *= i;
+        i++;
+      } while (i <= n);
+      alert(n + "! = " + f);
+    }
+  </script>
+</body>
+</html>
+

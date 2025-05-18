@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 8 - Factorial</title>
+</head>
+<body>
+  <h2>Ejercicio 8: Factorial (n &lt; 15)</h2>
+  <button onclick="factorial()">Calcular</button>
+
+  <script>
+    function factorial() {
+      let n = parseInt(prompt("Ingrese un número menor a 15:"));
+      if (isNaN(n) || n < 0 || n >= 15) {
+        alert("Número no válido.");
+        return;
+      }
+
+      let f = 1;
+      for (let i = 1; i <= n; i++) {
+        f *= i;
+      }
+
+      alert("Factorial de " + n + " es " + f);
+    }
+  </script>
+</body>
+</html>

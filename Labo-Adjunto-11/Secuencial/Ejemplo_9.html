@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 8 - Promedio de 3 Números</title>
+</head>
+<body>
+  <h1>Ejercicio 8: Promedio de 3 Números</h1>
+  <button onclick="calcularPromedio()">Calcular Promedio</button>
+
+  <script>
+    function calcularPromedio() {
+      let a = parseFloat(prompt("Ingrese el primer número:"));
+      let b = parseFloat(prompt("Ingrese el segundo número:"));
+      let c = parseFloat(prompt("Ingrese el tercer número:"));
+
+      if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        alert("Debe ingresar tres números válidos.");
+        return;
+      }
+
+      let s = a + b + c;
+      let nf = s / 3;
+
+      alert("Promedio: " + nf.toFixed(2));
+    }
+  </script>
+</body>
+</html>
+

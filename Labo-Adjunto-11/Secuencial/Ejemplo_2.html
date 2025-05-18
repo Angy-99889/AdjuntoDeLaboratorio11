@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 2 - Promedio de 4 números</title>
+</head>
+<body>
+  <h1>Ejercicio 2: Promedio de 4 números</h1>
+  <button onclick="calcularPromedio()">Calcular Promedio</button>
+
+  <script>
+    function calcularPromedio() {
+      let a = parseFloat(prompt("Ingrese el número a:"));
+      let b = parseFloat(prompt("Ingrese el número b:"));
+      let c = parseFloat(prompt("Ingrese el número c:"));
+      let d = parseFloat(prompt("Ingrese el número d:"));
+
+      if ([a, b, c, d].some(isNaN)) {
+        alert("Todos los valores deben ser números válidos.");
+        return;
+      }
+
+      let suma = a + b + c + d;
+      let promedio = suma / 4;
+
+      alert("Suma: " + suma + "\nPromedio: " + promedio.toFixed(2));
+    }
+  </script>
+</body>
+</html>

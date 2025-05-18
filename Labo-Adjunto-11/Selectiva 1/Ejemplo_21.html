@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 21 - Calcular Edad</title>
+</head>
+<body>
+  <h1>Ejercicio 21: Calcular edad a partir del año de nacimiento</h1>
+  <button onclick="calcularEdad()">Calcular</button>
+
+  <script>
+    function calcularEdad() {
+      let actual = parseInt(prompt("Ingrese el año actual:"));
+      let nacimiento = parseInt(prompt("Ingrese su año de nacimiento:"));
+
+      if (isNaN(actual) || isNaN(nacimiento) || nacimiento > actual) {
+        alert("Datos inválidos.");
+        return;
+      }
+
+      let edad = actual - nacimiento;
+      alert("Su edad es: " + edad + " años.");
+    }
+  </script>
+</body>
+</html>
+

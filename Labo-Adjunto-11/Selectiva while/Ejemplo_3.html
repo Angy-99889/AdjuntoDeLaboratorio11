@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Suma entre 1 y n (while)</title>
+</head>
+<body>
+  <h1>Ejercicio 3: Suma entre 1 y n (while)</h1>
+  <button onclick="sumarNumeros()">Calcular Suma</button>
+
+  <script>
+    function sumarNumeros() {
+      let n = parseInt(prompt("Ingrese el valor de n:"));
+      if (isNaN(n) || n < 1) {
+        alert("Valor no válido.");
+        return;
+      }
+
+      let i = 1;
+      let suma = 0;
+      while (i <= n) {
+        suma += i;
+        i++;
+      }
+
+      alert("Suma total: " + suma);
+    }
+  </script>
+</body>
+</html>
+

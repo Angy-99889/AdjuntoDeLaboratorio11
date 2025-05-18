@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 3 - Conversión de metros</title>
+</head>
+<body>
+  <h1>Ejercicio 3: Conversión de metros a kilómetros y millas</h1>
+  <button onclick="convertir()">Convertir</button>
+
+  <script>
+    function convertir() {
+      let metros = parseFloat(prompt("Ingrese la cantidad en metros:"));
+      if (isNaN(metros)) {
+        alert("Ingrese un número válido.");
+        return;
+      }
+
+      let kilometros = metros / 1000;
+      let millas = metros / 1609;
+
+      alert("Kilómetros: " + kilometros.toFixed(4) + "\nMillas: " +millas.toFixed(4));
+    }
+  </script>
+</body>
+</html>

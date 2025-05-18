@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Impares entre 1 y n (while)</title>
+</head>
+<body>
+  <h1>Ejercicio 2: Números impares entre 1 y n (while)</h1>
+  <button onclick="mostrarImpares()">Mostrar Impares</button>
+
+  <script>
+    function mostrarImpares() {
+      let n = parseInt(prompt("Ingrese el valor de n:"));
+      if (isNaN(n) || n < 1) {
+        alert("Valor no válido.");
+        return;
+      }
+
+      let i = 1;
+      let salida = "";
+      while (i <= n) {
+        salida += i + " ";
+        i += 2;
+      }
+
+      alert("Números impares: " + salida.trim());
+    }
+  </script>
+</body>
+</html>

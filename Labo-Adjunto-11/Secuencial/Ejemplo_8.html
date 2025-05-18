@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 8 - Invertir Número</title>
+</head>
+<body>
+  <h1>Ejercicio 8: Invertir número de 4 cifras</h1>
+  <p>Este programa invierte un número entero de 4 cifras.</p>
+  <button onclick="invertirNumero()">Invertir</button>
+  <script>
+    function invertirNumero() {
+      let n = parseInt(prompt("Ingrese un número entero de 4 cifras:"));
+
+      if (isNaN(n) ||  n < 1000 || n > 9999) {
+        alert("Debe ingresar un número entero de exactamente 4 cifras.");
+        return;
+      }
+      let nm = n; 
+      let a = n % 10;    
+      n = Math.floor(n / 10);
+      let b = n % 10;
+      n = Math.floor(n / 10);
+      let c = n % 10;
+      let d = Math.floor(n / 10); 
+      let nn = a * 1000 + b * 100 + c * 10 + d;
+      alert("Número original: " + nm + "\nNúmero invertido: " + nn);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 17 - Sueldo con descuento</title>
+</head>
+<body>
+  <h1>Ejercicio 17: Cálculo de sueldo con descuento del 10%</h1>
+  <button onclick="calcularSueldo()">Calcular</button>
+
+  <script>
+    function calcularSueldo() {
+      let hr = parseFloat(prompt("Ingrese las horas trabajadas:"));
+      let phs = parseFloat(prompt("Ingrese el pago por hora:"));
+
+      if (isNaN(hr) || isNaN(phs)) {
+        alert("Ingrese números válidos.");
+        return;
+      }
+
+      let sb = hr * phs;
+      let sn = sb - (sb * 0.10);
+      alert("Sueldo básico: " +sb.toFixed(2) + "\nSueldo neto: " + sn.toFixed(2));
+    }
+  </script>
+</body>
+</html>

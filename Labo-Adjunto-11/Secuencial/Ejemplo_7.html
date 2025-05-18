@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 6 - Operación matemática</title>
+</head>
+<body>
+  <h1>Ejercicio 6: Operación matemática con variables</h1>
+  <button onclick="calcularOperacion()">Calcular</button>
+
+  <script>
+    function calcularOperacion() {
+      let x = parseFloat(prompt("Ingrese valor x:"));
+      let y = parseFloat(prompt("Ingrese valor y:"));
+      let z = parseFloat(prompt("Ingrese valor z:"));
+
+      if (isNaN(x) || isNaN(y) || isNaN(z) || z === 0 || x === 0) {
+        alert("Ingrese valores válidos y z,x distintos de cero.");
+        return;
+      }
+      let pi = 3.1416;
+      let r = ((3 * x) / 2) + ((4 * y) / z) - (pi / x);
+
+      alert("Resultado r: " + r.toFixed(4));
+    }
+  </script>
+</body>
+</html>

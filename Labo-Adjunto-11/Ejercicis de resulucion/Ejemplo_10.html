@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Primos hasta N</title>
+</head>
+<body>
+  <h2>Primeros N Números Primos</h2>
+  <button onclick="mostrarPrimos()">Mostrar</button>
+  <script>
+    function mostrarPrimos() {
+      let n = parseInt(prompt("¿Cuántos números primos deseas mostrar?"));
+      let c = 1, p = 2, salida = "";
+      while (c <= n) {
+        let esPrimo = true;
+        for (let d = 2; d < p; d++) {
+          if (p % d === 0) {
+            esPrimo = false;
+            break;
+          }}
+        if (esPrimo) {
+          salida += p + " ";
+          c++;
+        }
+        p++;
+      }
+      alert("Primos: " +salida);
+    }
+  </script>
+</body>
+</html>

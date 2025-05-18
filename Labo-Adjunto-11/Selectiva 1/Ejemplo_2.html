@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio Selectivo 2 - Último Dígito</title>
+</head>
+<body>
+  <h1>Ejercicio 2: Último dígito de un número</h1>
+  <button onclick="ultimoDigito()">Calcular</button>
+
+  <script>
+    function ultimoDigito() {
+      let n = prompt("Ingrese un número mayor a 99:");
+      if (isNaN(n) || n.length < 3) {
+        alert("Debe ingresar un número válido mayor a 99.");
+        return;
+      }
+
+      let ultimo = n.trim().slice(-1);
+      alert("El último dígito es: " + ultimo);
+    }
+  </script>
+</body>
+</html>

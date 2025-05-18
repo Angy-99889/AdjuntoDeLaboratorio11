@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio Secuencial 1 - Suma y Producto</title>
+</head>
+<body>
+  <h1>Ejercicio Secuencial 1</h1>
+  <p>Calcula la suma y el producto de dos números ingresados por el usuario.</p>
+  <button onclick="calcularSumaProducto()">Ejecutar</button>
+
+  <script>
+    function calcularSumaProducto() {
+      
+      let a = parseFloat(prompt("Ingrese el primer número (a):"));
+      let b = parseFloat(prompt("Ingrese el segundo número (b):"));
+
+      if (isNaN(a) || isNaN(b)) {
+        alert("Ambos valores deben ser números.");
+        return;}
+
+      let S = a + b;
+      let M = a * b;
+
+      alert(
+        "Suma (S = a + b): " + S + "\n" +
+        "Producto (M = a * b): " + M);
+    }
+  </script>
+</body>
+</html>
+

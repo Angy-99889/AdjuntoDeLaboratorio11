@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 15 - Cálculo simple</title>
+</head>
+<body>
+  <h1>Ejercicio 15: Calcular i = (2*x)/100</h1>
+  <button onclick="calcularI()">Calcular</button>
+
+  <script>
+    function calcularI() {
+      let x = parseFloat(prompt("Ingrese valor x:"));
+      if (isNaN(x)) {
+        alert("Ingrese un número válido.");
+        return;
+      }
+
+      let i = (2 * x) / 100;
+      alert("Resultado i: " + i.toFixed(4));
+    }
+  </script>
+</body>
+</html>

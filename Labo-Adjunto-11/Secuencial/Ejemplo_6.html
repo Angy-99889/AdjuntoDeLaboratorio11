@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 5 - Área de triángulo (Herón)</title>
+</head>
+<body>
+  <h1>Ejercicio 5: Área de triángulo por fórmula de Herón</h1>
+  <button onclick="calcularAreaTriangulo()">Calcular Área</button>
+
+  <script>
+    function calcularAreaTriangulo() {
+      let a = parseFloat(prompt("Ingrese lado a:"));
+      let b = parseFloat(prompt("Ingrese lado b:"));
+      let c = parseFloat(prompt("Ingrese lado c:"));
+
+      if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        alert("Ingrese valores válidos.");
+        return;
+      }
+
+      let s = (a + b + c) / 2;
+      let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+      alert("Área del triángulo: " +area.toFixed(2));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 13 - Rango entre 20 y 50</title>
+</head>
+<body>
+  <h1>Ejercicio 13: Verificar si el número está entre 20 y 50</h1>
+  <button onclick="verificarRango()">Verificar</button>
+
+  <script>
+    function verificarRango() {
+      let n = parseFloat(prompt("Ingrese un número:"));
+
+      if (isNaN(n)) {
+        alert("Debe ingresar un número válido.");
+        return;
+      }
+
+      if (n > 20 && n < 50) {
+        alert(n + " está entre 20 y 50");
+      } else {
+        alert(n + " NO está en el rango entre 20 y 50");
+      }
+    }
+  </script>
+</body>
+</html>

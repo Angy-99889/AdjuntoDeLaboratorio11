@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Suma de Factoriales</title>
+</head>
+<body>
+  <h2>Suma de dos Factoriales</h2>
+  <button onclick="sumarFactoriales()">Calcular</button>
+
+  <script>
+    function factorial(n) {
+      let f = 1;
+      for (let i = 1; i <= n; i++) f *= i;
+      return f;
+    }
+
+    function sumarFactoriales() {
+      let n1 = parseInt(prompt("Primer número (<10):"));
+      let n2 = parseInt(prompt("Segundo número (<10):"));
+      if (n1 < 10 && n2 < 10) {
+        let suma = factorial(n1) + factorial(n2);
+        alert("Suma de factoriales: " +suma);
+      } else alert("Números no válidos");
+    }
+  </script>
+</body>
+</html>

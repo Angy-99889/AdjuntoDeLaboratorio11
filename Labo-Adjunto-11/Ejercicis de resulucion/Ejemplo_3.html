@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3 - Estación del Año</title>
+</head>
+<body>
+  <h2>Ejercicio 3: Estación según el Mes</h2>
+  <button onclick="mostrarEstacion()">Mostrar</button>
+
+  <script>
+    function mostrarEstacion() {
+      let mes = prompt("Ingrese un mes:").toLowerCase();
+
+      let mensaje = "";
+      if (["diciembre", "enero", "febrero"].includes(mes)) {
+        mensaje = "verano";
+      } else if (["marzo", "abril", "mayo"].includes(mes)) {
+        mensaje = "otoño";
+      } else if (["junio", "julio", "agosto"].includes(mes)) {
+        mensaje = "invierno";
+      } else if (["septiembre", "octubre", "noviembre"].includes(mes)) {
+        mensaje = "primavera";
+      } else {
+        alert("Mes no válido.");
+        return;
+      }
+      alert("En" + mes + " es " + mensaje + " en Bolivia.");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sueldo del Empleado</title>
+</head>
+<body>
+  <h2>Sueldo del Empleado</h2>
+  <button onclick="calcularSueldo()">Calcular</button>
+
+  <script>
+    function calcularSueldo() {
+      let empleado = prompt("Nombre del empleado:");
+      let horas = parseFloat(prompt("Horas trabajadas:"));
+      let costo = parseFloat(prompt("Costo por hora:"));
+
+      let sueldoBasico = horas * costo;
+      let bonificacion = sueldoBasico;
+      let sueldoBruto = sueldoBasico + bonificacion;
+      let descuento = sueldoBruto * 0.12;
+      let sueldoNeto = sueldoBruto - descuento;
+
+      alert(
+        "Empleado:" +empleado+"\n"+
+"Sueldo Bruto:" +sueldoBruto+"\n"+
+"Descuento:" +descuento+"\n"+
+"Sueldo Neto:" +sueldoNeto);
+    }
+  </script>
+</body>
+</html>

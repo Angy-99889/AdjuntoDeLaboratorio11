@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio Selectivo 4 - Mayor de 2 Números</title>
+</head>
+<body>
+  <h1>Ejercicio 4: Mayor de dos números</h1>
+  <button onclick="mayorDeDos()">Calcular</button>
+
+  <script>
+    function mayorDeDos() {
+      let a = parseFloat(prompt("Ingrese el primer número:"));
+      let b = parseFloat(prompt("Ingrese el segundo número:"));
+
+      if (isNaN(a) || isNaN(b)) {
+        alert("Debe ingresar dos números válidos.");
+        return;
+      }
+
+      let mayor = (a > b) ? a : (a === b ? "Ambos son iguales" : b);
+      alert("El número mayor es: " + mayor);
+    }
+  </script>
+</body>
+</html>

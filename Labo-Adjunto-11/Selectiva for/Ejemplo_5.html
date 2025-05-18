@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Factorial</title>
+</head>
+<body>
+  <h1>Ejercicio 5: Factorial de un número (for)</h1>
+  <button onclick="calcularFactorial()">Calcular Factorial</button>
+
+  <script>
+    function calcularFactorial() {
+      let n = parseInt(prompt("Ingrese un número:"));
+      if (isNaN(n) || n < 0) {
+        alert("Número no válido.");
+        return;
+      }
+
+      let factorial = 1;
+      for (let i = 1; i <= n; i++) {
+        factorial *= i;
+      }
+
+      alert(n + "! = " + factorial);
+    }
+  </script>
+</body>
+</html>
+
